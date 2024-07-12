@@ -1,0 +1,41 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="TranTrongBinh2210900004_Demo_OnTapModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+  <EntityType Name="Ttb_SACH">
+    <Key>
+      <PropertyRef Name="Ttb_MaSach" />
+    </Key>
+    <Property Name="Ttb_MaSach" Type="char" MaxLength="5" Nullable="false" />
+    <Property Name="Ttb_TenSach" Type="nvarchar" MaxLength="50" />
+    <Property Name="Ttb_SoTrang" Type="int" />
+    <Property Name="Ttb_NamXB" Type="int" />
+    <Property Name="Ttb_MaTG" Type="char" MaxLength="5" />
+    <Property Name="Ttb_TrangThai" Type="bit" />
+  </EntityType>
+  <EntityType Name="Ttb_TACGIA">
+    <Key>
+      <PropertyRef Name="Ttb_MaTG" />
+    </Key>
+    <Property Name="Ttb_MaTG" Type="char" MaxLength="5" Nullable="false" />
+    <Property Name="Ttb_TenTacGia" Type="nvarchar" MaxLength="50" />
+  </EntityType>
+  <Association Name="FK_Ttb_SACH_Ttb_TACGIA">
+    <End Role="Ttb_TACGIA" Type="Self.Ttb_TACGIA" Multiplicity="0..1" />
+    <End Role="Ttb_SACH" Type="Self.Ttb_SACH" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Ttb_TACGIA">
+        <PropertyRef Name="Ttb_MaTG" />
+      </Principal>
+      <Dependent Role="Ttb_SACH">
+        <PropertyRef Name="Ttb_MaTG" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <EntityContainer Name="TranTrongBinh2210900004_Demo_OnTapModelStoreContainer">
+    <EntitySet Name="Ttb_SACH" EntityType="Self.Ttb_SACH" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Ttb_TACGIA" EntityType="Self.Ttb_TACGIA" Schema="dbo" store:Type="Tables" />
+    <AssociationSet Name="FK_Ttb_SACH_Ttb_TACGIA" Association="Self.FK_Ttb_SACH_Ttb_TACGIA">
+      <End Role="Ttb_TACGIA" EntitySet="Ttb_TACGIA" />
+      <End Role="Ttb_SACH" EntitySet="Ttb_SACH" />
+    </AssociationSet>
+  </EntityContainer>
+</Schema>

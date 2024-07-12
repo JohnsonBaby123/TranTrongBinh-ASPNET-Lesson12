@@ -1,0 +1,25 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="TranTrongBinh2210900004_Demo_OnTapModelStoreContainer" CdmEntityContainer="TranTrongBinh2210900004_Demo_OnTapEntities">
+    <EntitySetMapping Name="Ttb_SACH">
+      <EntityTypeMapping TypeName="TranTrongBinh2210900004_Demo_OnTapModel.Ttb_SACH">
+        <MappingFragment StoreEntitySet="Ttb_SACH">
+          <ScalarProperty Name="Ttb_MaSach" ColumnName="Ttb_MaSach" />
+          <ScalarProperty Name="Ttb_TenSach" ColumnName="Ttb_TenSach" />
+          <ScalarProperty Name="Ttb_SoTrang" ColumnName="Ttb_SoTrang" />
+          <ScalarProperty Name="Ttb_NamXB" ColumnName="Ttb_NamXB" />
+          <ScalarProperty Name="Ttb_MaTG" ColumnName="Ttb_MaTG" />
+          <ScalarProperty Name="Ttb_TrangThai" ColumnName="Ttb_TrangThai" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Ttb_TACGIA">
+      <EntityTypeMapping TypeName="TranTrongBinh2210900004_Demo_OnTapModel.Ttb_TACGIA">
+        <MappingFragment StoreEntitySet="Ttb_TACGIA">
+          <ScalarProperty Name="Ttb_MaTG" ColumnName="Ttb_MaTG" />
+          <ScalarProperty Name="Ttb_TenTacGia" ColumnName="Ttb_TenTacGia" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+  </EntityContainerMapping>
+</Mapping>

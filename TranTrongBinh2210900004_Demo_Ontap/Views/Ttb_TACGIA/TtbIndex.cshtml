@@ -1,0 +1,34 @@
+﻿@model IEnumerable<TranTrongBinh2210900004_Demo_Ontap.Models.Ttb_TACGIA>
+
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>Index</h2>
+
+<p>
+    @Html.ActionLink("Create New", "Create")
+</p>
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.Ttb_TenTacGia)
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.Ttb_TenTacGia)
+        </td>
+        <td>
+            @Html.ActionLink("Edit", "Edit", new { id=item.Ttb_MaTG }) |
+            @Html.ActionLink("Details", "Details", new { id=item.Ttb_MaTG }) |
+            @Html.ActionLink("Delete", "Delete", new { id=item.Ttb_MaTG })
+        </td>
+    </tr>
+}
+
+</table>

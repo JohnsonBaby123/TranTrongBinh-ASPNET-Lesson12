@@ -1,0 +1,58 @@
+﻿@model IEnumerable<TranTrongBinh2210900004_Demo_Ontap.Models.Ttb_SACH>
+
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>Index</h2>
+
+<p>
+    @Html.ActionLink("Create New", "Create")
+</p>
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.Ttb_TenSach)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Ttb_SoTrang)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Ttb_NamXB)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Ttb_TrangThai)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Ttb_TACGIA.Ttb_TenTacGia)
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.Ttb_TenSach)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Ttb_SoTrang)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Ttb_NamXB)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Ttb_TrangThai)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Ttb_TACGIA.Ttb_TenTacGia)
+        </td>
+        <td>
+            @Html.ActionLink("Edit", "Edit", new { id=item.Ttb_MaSach }) |
+            @Html.ActionLink("Details", "Details", new { id=item.Ttb_MaSach }) |
+            @Html.ActionLink("Delete", "Delete", new { id=item.Ttb_MaSach })
+        </td>
+    </tr>
+}
+
+</table>

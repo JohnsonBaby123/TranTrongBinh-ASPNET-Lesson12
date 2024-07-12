@@ -1,0 +1,27 @@
+﻿@model TranTrongBinh2210900004_Demo_Ontap.Models.Ttb_TACGIA
+
+@{
+    ViewBag.Title = "Details";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>Ttb_TACGIA</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.Ttb_TenTacGia)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Ttb_TenTacGia)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.Ttb_MaTG }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>
